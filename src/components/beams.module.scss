@@ -1,0 +1,18 @@
+.beams {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  mask: linear-gradient(to bottom, #fff 0% 75%, transparent 80%);
+  mask-size: 100%;
+  mask-position: center;
+  mask-repeat: no-repeat;
+  mask-composite: intersect;
+  pointer-events: none;
+  z-index: -1;
+  height: 50rem;
+
+  @media screen and (min-width: 960px) {
+    height: 70rem;
+  }
+}

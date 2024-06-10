@@ -1,0 +1,99 @@
+@font-face {
+  font-family: "Inter Tight";
+  src: url("../fonts/InterTight-Italic.woff2") format("woff2");
+  font-style: italic;
+  font-weight: 100 900;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Inter Tight";
+  src: url("../fonts/InterTight.woff2") format("woff2");
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+}
+
+:root {
+  --grey-100: #11111a;
+  --grey-200: #17171f;
+  --grey-300: #22222a;
+  --grey-400: #2b2b35;
+  --grey-500: #35353b;
+  --grey-600: #454556;
+  --grey-700: #575760;
+  --grey-800: #aaa;
+  --grey-900: #fff;
+
+  --accent-600: rgb(31 31 71);
+  --accent-700: rgb(75 75 173);
+  --accent-800: rgb(103 103 163);
+  --accent-900: #77f;
+  --accent-900-transparent: rgba(119, 119, 255, 0.4);
+
+  --green-100: #0f5132;
+  --green-900: #75b798;
+
+  --yellow-100: #332701;
+  --yellow-900: #ffda6a;
+
+  --red-100: #3b2931;
+  --red-800: #b12126;
+  --red-900: #da373c;
+
+  font-size: 16px;
+}
+
+/* Firefox */
+* {
+  scrollbar-color: rgba(119, 119, 255, 0.3) rgba(0, 0, 0, 0);
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 16px;
+}
+
+*::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0);
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: rgba(119, 119, 255, 0.3);
+  background-clip: content-box;
+  border: 5px solid transparent;
+  border-radius: 10px;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(119, 119, 255, 0.4);
+  border: 3px solid transparent;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--grey-100);
+  color: var(--grey-900);
+}
+
+body,
+input,
+button,
+textarea,
+a {
+  font-family: "Inter Tight", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+a {
+  color: var(--accent-800);
+  text-decoration: none;
+  transition: 0.2s ease-in-out all;
+
+  &:hover {
+    color: var(--accent-900);
+  }
+}

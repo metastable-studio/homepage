@@ -1,0 +1,175 @@
+.hero,
+.divider,
+.screenshot {
+  margin: 4rem 0;
+
+  @media screen and (min-width: 960px) {
+    margin: 8rem 0;
+  }
+}
+
+.hero {
+  text-align: center;
+
+  h1 {
+    font-size: 3rem;
+    color: transparent;
+    background: -webkit-linear-gradient(
+      35deg,
+      var(--accent-900) 0%,
+      var(--accent-900) 50%,
+      var(--grey-900) 100%
+    );
+    background-clip: text;
+    max-width: 800px;
+    font-weight: 500;
+    margin: 0 auto;
+
+    @media screen and (min-width: 960px) {
+      font-size: 5rem;
+    }
+  }
+
+  h2 {
+    color: var(--grey-800);
+    max-width: 600px;
+    margin: 0 auto;
+    margin-top: 2rem;
+    font-weight: 400;
+  }
+
+  h3 {
+    color: var(--grey-800);
+    font-weight: 400;
+  }
+}
+
+.divider {
+  text-align: center;
+
+  h2 {
+    font-weight: 500;
+    color: var(--grey-900);
+    max-width: 600px;
+    margin: 0 auto;
+    margin-top: 2rem;
+    font-size: 2rem;
+
+    @media screen and (min-width: 960px) {
+      font-size: 4rem;
+    }
+  }
+}
+
+.screenshot {
+  position: relative;
+
+  img {
+    position: relative;
+    border: 1px solid var(--accent-900-transparent);
+    max-width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 0 2rem 0.25rem var(--grey-300);
+  }
+}
+
+.download {
+  margin: 2rem 0;
+
+  .cta {
+    color: white;
+    border: 1px solid var(--accent-900);
+    background: var(--accent-600);
+    padding: 1rem 2rem;
+    display: inline-flex;
+    align-items: center;
+    font-weight: 500;
+    font-size: 1.1rem;
+    border-radius: 2.5rem;
+    transition: 0.2s ease-in-out all;
+    margin: 1rem;
+
+    &:hover {
+      background: var(--accent-700);
+    }
+
+    .ctaText {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+    }
+
+    .version {
+      font-size: 0.8rem;
+      color: var(--grey-800);
+    }
+
+    svg {
+      fill: white;
+      height: 1.9rem;
+      margin-right: 1rem;
+    }
+  }
+
+  .info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 0.85rem;
+    margin-top: 1rem;
+    color: var(--grey-700);
+
+    span {
+      margin-bottom: 0.2rem;
+    }
+  }
+}
+
+.bento {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 2rem;
+
+  @media screen and (min-width: 960px) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .bento1,
+  .bento2 {
+    height: 20rem;
+    background-color: var(--grey-200);
+    border: 1px solid var(--grey-400);
+    border-radius: 1.5rem;
+    padding: 2rem;
+    background-image: radial-gradient(
+      circle at bottom left,
+      var(--grey-300) 0%,
+      var(--grey-200) 75%
+    );
+
+    h3 {
+      font-weight: 500;
+      font-size: 1.5rem;
+      margin: 0;
+      margin-bottom: 1rem;
+    }
+
+    span {
+      color: var(--grey-800);
+    }
+  }
+
+  .bento1 {
+    grid-column: span 1;
+  }
+
+  .bento2 {
+    grid-column: span 1;
+
+    @media screen and (min-width: 960px) {
+      grid-column: span 2;
+    }
+  }
+}
