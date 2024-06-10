@@ -1,7 +1,7 @@
 import React from "react";
 
 import "../styles/global.scss";
-import styles from "./layout.module.scss";
+import * as styles from "./layout.module.scss";
 
 export default function Menu({ className }: { className?: string }) {
   return (
