@@ -13,7 +13,7 @@
 }
 
 .header {
-  border-bottom: 1px solid var(--grey-400);
+  border-bottom: 1px solid var(--grey-300);
   backdrop-filter: blur(12px);
   position: fixed;
   top: 0;
@@ -36,7 +36,7 @@
 }
 
 .footer {
-  border-top: 1px solid var(--grey-400);
+  border-top: 1px solid var(--grey-300);
   margin-top: 8rem;
 
   .inner {
@@ -62,6 +62,11 @@
   display: flex;
   align-items: center;
   font-weight: 600;
+  color: var(--grey-900);
+
+  &:hover {
+    color: var(--grey-900);
+  }
 
   @media screen and (min-width: 960px) {
     margin-left: -0.6rem;
@@ -132,13 +137,13 @@
   ul {
     list-style-type: none;
     padding: 0;
-    margin: 0;
+    margin: 0 1.5rem;
+    margin-bottom: 1.5rem;
     display: flex;
     flex-direction: column;
     align-items: center;
 
     li {
-      margin-left: 1.5rem;
       width: 100%;
 
       a {
@@ -173,7 +178,7 @@
 
   @media screen and (max-width: 960px) {
     &.open {
-      max-height: 200px;
+      max-height: 400px;
     }
   }
 

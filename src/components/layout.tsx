@@ -19,10 +19,10 @@ export default function Layout({
       {showBackground && <Beams />}
       <header className={styles.header}>
         <div className={styles.inner}>
-          <div className={styles.logo}>
+          <a className={styles.logo} href="/">
             <img src={logo} />
             <span>Metastable</span>
-          </div>
+          </a>
           <Menu className={styles.desktopMenu} />
           <button
             className={styles.toggle}
