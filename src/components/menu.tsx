@@ -9,6 +9,15 @@ export default function Menu({ className }: { className?: string }) {
       <ul>
         <li>
           <a
+            href="https://github.com/mat-sz/metastable/blob/main/CHANGELOG.md"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            Changelog
+          </a>
+        </li>
+        <li>
+          <a
             href="https://discord.gg/Sf9zKaXzXe"
             rel="noopener noreferrer"
             target="_blank"
