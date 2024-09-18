@@ -113,8 +113,8 @@ const IndexPage: React.FC<PageProps> = () => {
         <div className={styles.bento2}>
           <h3>Bring your own models</h3>
           <span>
-            Metastable lets you use any Stable Diffusion based model, along with
-            LoRAs, IP Adapters, ControlNets and more.
+            Metastable lets you use any Stable Diffusion (1, 2, 3, XL) or FLUX.1
+            based model, along with LoRAs, IP Adapters, ControlNets and more.
           </span>
         </div>
       </div>
