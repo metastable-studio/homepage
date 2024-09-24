@@ -2,7 +2,7 @@ import LinuxIcon from "./icons/linux";
 import MacIcon from "./icons/mac";
 import WindowsIcon from "./icons/windows";
 
-export const version = "0.0.3";
+export const version = "0.0.4";
 
 const baseUrl = "https://api.metastable.studio/electron/update/Metastable";
 
