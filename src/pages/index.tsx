@@ -1,10 +1,11 @@
 import * as React from "react";
 import type { HeadFC, PageProps } from "gatsby";
+import { useQuery } from "@tanstack/react-query";
 
 import * as styles from "./index.module.scss";
 import screenshot from "../images/screenshot.png";
 import Layout from "../components/layout";
-import { platforms, version } from "../version";
+import { fetchPlatforms } from "../version";
 
 function getOS() {
   if (typeof window === "undefined") {
@@ -34,10 +35,40 @@ function getOS() {
   return undefined;
 }
 
-const IndexPage: React.FC<PageProps> = () => {
+const DownloadButton: React.FC = () => {
   const os = getOS();
-  const platform = os && platforms[os];
+  const { isLoading, data } = useQuery({
+    queryKey: ["platforms"],
+    queryFn: fetchPlatforms,
+  });
+  const platform = os && data?.platforms?.[os];
 
+  if (isLoading) {
+    return <h3>Loading version information...</h3>;
+  }
+
+  if (!data) {
+    return <h3>Failed to fetch version information.</h3>;
+  }
+
+  if (!platform) {
+    return <h3>Your operating system is not supported.</h3>;
+  }
+
+  return (
+    <a href={platform.url} className={styles.cta}>
+      <platform.icon />
+      <div className={styles.ctaText}>
+        <span>Download for {platform.name}</span>
+        <span className={styles.version}>
+          v{data.version} &bull; {platform.arch}
+        </span>
+      </div>
+    </a>
+  );
+};
+
+const IndexPage: React.FC<PageProps> = () => {
   return (
     <Layout showBackground>
       <div className={styles.hero}>
@@ -47,19 +78,7 @@ const IndexPage: React.FC<PageProps> = () => {
           privacy and freedom.
         </h2>
         <div className={styles.download}>
-          {platform ? (
-            <a href={platform.url} className={styles.cta}>
-              <platform.icon />
-              <div className={styles.ctaText}>
-                <span>Download for {platform.name}</span>
-                <span className={styles.version}>
-                  v{version} &bull; {platform.arch}
-                </span>
-              </div>
-            </a>
-          ) : (
-            <h3>Your operating system is not supported.</h3>
-          )}
+          <DownloadButton />
           <div className={styles.info}>
             <span>
               <a href="/download">Other versions and operating systems</a>
