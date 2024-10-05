@@ -89,7 +89,7 @@ export const Beams = React.memo(({ className }: { className?: string }) => {
               key={`gradient-${index}`}
               className={styles.gradient}
             >
-              <animate
+              {/* <animate
                 attributeName="x1"
                 values="0%;100%;"
                 dur={duration}
@@ -112,7 +112,7 @@ export const Beams = React.memo(({ className }: { className?: string }) => {
                 values={`0%;${93 + Math.random() * 8}%;`}
                 dur={duration}
                 repeatCount="indefinite"
-              ></animate>
+              ></animate> */}
               <stop stopColor="var(--grey-900)" stopOpacity="0"></stop>
               <stop stopColor="var(--grey-900)"></stop>
               <stop offset="32.5%" stopColor="var(--accent-900)"></stop>
