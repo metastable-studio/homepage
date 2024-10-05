@@ -16,11 +16,11 @@ interface VersionInfo {
 }
 
 export async function fetchPlatforms(): Promise<VersionInfo> {
-  const req = await fetch("https://api.metastable.studio/version.json");
+  const req = await fetch("https://update.metastable.studio/version.json");
   const json = await req.json();
   const version = json.version;
 
-  const baseUrl = "https://api.metastable.studio/electron/update/Metastable";
+  const baseUrl = "https://update.metastable.studio/desktop/Metastable";
 
   return {
     version,
