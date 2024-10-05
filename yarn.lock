@@ -5584,6 +5584,17 @@ gatsby-parcel-config@1.13.1:
     "@parcel/transformer-js" "2.8.3"
     "@parcel/transformer-json" "2.8.3"
 
+gatsby-plugin-manifest@^5.13.1:
+  version "5.13.1"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-manifest/-/gatsby-plugin-manifest-5.13.1.tgz#4e7a87c38c5d47622016eec70ce1383f6e331f60"
+  integrity sha512-F8zGMYz2tRDAzQO7hLrYv+xCFyIoeySeGsEk9j1KTdWB4liVQvLtFSXzj7yljyOTinDmA7mDStCiQFStC0rHZQ==
+  dependencies:
+    "@babel/runtime" "^7.20.13"
+    gatsby-core-utils "^4.13.1"
+    gatsby-plugin-utils "^4.13.1"
+    semver "^7.5.3"
+    sharp "^0.32.6"
+
 gatsby-plugin-mdx@^5.13.1:
   version "5.13.1"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-mdx/-/gatsby-plugin-mdx-5.13.1.tgz#9fd9d7612daefd372cb9c0f0b9ba8045f490bf3d"
