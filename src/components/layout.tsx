@@ -4,11 +4,9 @@ import "../styles/global.scss";
 import * as styles from "./layout.module.scss";
 import logo from "../images/logo.svg";
 import MenuIcon from "../icons/menu";
-import { Beams } from "./beams";
 import Menu from "./menu";
 
 export default function Layout({
-  showBackground,
   children,
 }: React.PropsWithChildren<{ showBackground?: boolean }>) {
   const [open, setOpen] = useState(false);
@@ -16,7 +14,6 @@ export default function Layout({
   return (
     <div className={styles.layout}>
       <div className={styles.gradient} />
-      {showBackground && <Beams />}
       <header className={styles.header}>
         <div className={styles.inner}>
           <a className={styles.logo} href="/">
