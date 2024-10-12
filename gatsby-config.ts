@@ -29,7 +29,7 @@ const config: GatsbyConfig = {
         short_name: `Metastable`,
         start_url: `/`,
         background_color: `#11111a`,
-        theme_color: `#77f`,
+        theme_color: `#11111a`,
         display: `standalone`,
         icon: `src/images/favicon.png`,
       },

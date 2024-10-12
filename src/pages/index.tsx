@@ -94,6 +94,20 @@ const IndexPage: React.FC<PageProps> = () => {
       </div>
       <div className={styles.bento}>
         <div className={styles.bento1}>
+          <h3>Solid foundation</h3>
+          <span>
+            Metastable is based on{" "}
+            <a
+              href="https://github.com/comfyanonymous/ComfyUI"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              ComfyUI
+            </a>
+            , a reliable and efficient AI image generation tool.
+          </span>
+        </div>
+        <div className={styles.bento1}>
           <h3>Free as in freedom</h3>
           <span>
             ...and as in beer. Metastable is completely{" "}
@@ -107,7 +121,7 @@ const IndexPage: React.FC<PageProps> = () => {
             , licensed under AGPLv3.
           </span>
         </div>
-        <div className={styles.bento2}>
+        <div className={styles.bento1}>
           <h3>What's a "Python"?</h3>
           <span>
             No need to worry about installing and managing dependencies.
