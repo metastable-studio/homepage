@@ -147,7 +147,7 @@ const IndexPage: React.FC<PageProps> = () => {
             >
               open source
             </a>
-            and licensed under AGPLv3.
+            , and licensed under AGPLv3.
           </span>
         </div>
         <div className={styles.bento2}>
