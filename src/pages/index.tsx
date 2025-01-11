@@ -6,6 +6,7 @@ import * as styles from "./index.module.scss";
 import screenshot from "../images/screenshot.png";
 import Layout from "../components/layout";
 import { fetchPlatforms } from "../version";
+import { URL_QUICKSTART } from "../consts";
 
 function getOS() {
   if (typeof window === "undefined") {
@@ -79,10 +80,13 @@ const IndexPage: React.FC<PageProps> = () => {
         </h2>
         <div className={styles.download}>
           <DownloadButton />
+
           <div className={styles.info}>
-            <span>
-              <a href="/download">Other versions and operating systems</a>
-            </span>
+            <a href={URL_QUICKSTART} rel="noopener noreferrer" target="_blank">
+              Getting started
+            </a>
+            <span>&bull;</span>
+            <a href="/download">Other versions and operating systems</a>
           </div>
         </div>
       </div>

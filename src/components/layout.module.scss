@@ -214,3 +214,17 @@
     display: none;
   }
 }
+
+.social {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  a {
+    font-size: 0 !important;
+
+    svg {
+      font-size: 1.1rem;
+    }
+  }
+}

@@ -116,13 +116,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
     font-size: 0.85rem;
     margin-top: 1rem;
-    color: var(--grey-700);
 
-    span {
-      margin-bottom: 0.2rem;
+    & > *:not(:last-child) {
+      margin-right: 0.5rem;
     }
   }
 }
